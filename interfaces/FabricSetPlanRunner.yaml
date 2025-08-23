@@ -9,8 +9,8 @@ description: "This capability transfers a newly created plan from the prompt too
               '<Runner interface=capabilities2_runner_fabric/FabricSetPlanRunner provider=capabilities2_runner_fabric/FabricSetPlanRunner/>'. This needs to be 
               triggered at the very end of each plan after 
               <Runner interface=capabilities2_runner_fabric/PromptPlanRunner provider=capabilities2_runner_fabric/PromptPlanRunner replan=false task=$task />
-              so that the plan created by the decision making authority such as an LLM can
-              be transferred to the capabilities2 executor for connection extraction and future triggering."
+              so that the plan created by the decision making authority such as an LLM can be transferred to the capabilities2 executor 
+              for connection extraction and future triggering."
 interface:
   services:
     "/prompt":
