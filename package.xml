@@ -39,5 +39,14 @@
     <capability_provider>
       providers/FabricSetPlanRunner.yaml
     </capability_provider>
+
+    <!-- FabricCompletionRunner -->
+    <capability_interface>
+      interfaces/FabricCompletionRunner.yaml
+    </capability_interface>
+
+    <capability_provider>
+      providers/FabricCompletionRunner.yaml
+    </capability_provider>
   </export>
 </package>
