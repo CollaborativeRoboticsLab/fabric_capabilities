@@ -1,4 +1,4 @@
-<library path="capabilities2_runner_fabric">
+<library path="fabric_capabilities">
     <class type="capabilities2_runner::FabricSetPlanRunner" base_class_type="capabilities2_runner::RunnerBase">
         <description>
             A plugin that sets a new Fabric plan to the Fabric

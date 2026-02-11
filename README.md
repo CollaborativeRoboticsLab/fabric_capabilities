@@ -1,4 +1,4 @@
-# Capabilities2_runner_fabric
+# fabric_capabilities
 
 Provides capabiilites2 runners for fabric stack
 

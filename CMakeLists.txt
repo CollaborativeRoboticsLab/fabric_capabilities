@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(capabilities2_runner_fabric)
+project(fabric_capabilities)
 
 # Default to C++17
 if(NOT CMAKE_CXX_STANDARD)
