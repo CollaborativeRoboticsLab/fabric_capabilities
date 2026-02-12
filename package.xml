@@ -24,9 +24,8 @@
   <depend>std_msgs</depend>
   <depend>fabric_msgs</depend>
   <depend>capabilities2_runner</depend>
-  <depend>event_logger</depend>
-  <depend>event_logger_msgs</depend>
-  <depend>tinyxml2_vendor</depend>
+  <depend>capabilities2_msgs</depend>
+  <depend>capabilities2_events</depend>
 
   <export>
     <build_type>ament_cmake</build_type>
