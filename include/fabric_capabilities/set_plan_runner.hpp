@@ -53,12 +53,7 @@ protected:
   generate_request(capabilities2_events::EventParameters& parameters) override
   {
     fabric_msgs::srv::SetFabricPlan::Request request;
-    request.plan = "";
-
-    if (parameters.has_value("ReceivedPlan"))
-      request.plan = std::any_cast<std::string>(parameters.get_value("ReceivedPlan"));
-    else
-      RCLCPP_WARN(node_->get_logger(), "No 'ReceivedPlan' parameter found in event parameters. Sending empty plan.");
+    request.plan = std::any_cast<std::string>(parameters.get_value("ReceivedPlan", ""));
 
     return request;
   }
