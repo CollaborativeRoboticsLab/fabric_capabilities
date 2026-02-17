@@ -36,7 +36,7 @@ public:
     init_service(node, run_config, "/fabric/set_plan");
 
     // emit start event
-    emit_started(bond_id, param_on_started());
+    emit_started(bond_id, "", param_on_started());
   }
 
 protected:
