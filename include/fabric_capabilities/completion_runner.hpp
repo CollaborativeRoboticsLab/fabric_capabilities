@@ -45,6 +45,7 @@ protected:
   generate_request(capabilities2_events::EventParameters& parameters) override
   {
     fabric_msgs::srv::CompleteFabric::Request request;
+    request.plan_id = std::any_cast<std::string>(parameters.get_value("plan_id", std::string{}));
     return request;
   }
 };
