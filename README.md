@@ -11,7 +11,7 @@ Provides capabiilites2 runners for fabric stack.
 
 ## Examples
 
-Examples depend on [CollaborativeRoboticsLab/capabilities2](https://github.com/CollaborativeRoboticsLab/capabilities2) and [CollaborativeRoboticsLab/prompt_tools](https://github.com/CollaborativeRoboticsLab/prompt_tools)
+Examples depend on [CollaborativeRoboticsLab/capabilities2](https://github.com/CollaborativeRoboticsLab/capabilities2) and [CollaborativeRoboticsLab/prompt_tools](https://github.com/CollaborativeRoboticsLab/prompt_tools). Following examples have been tested against turtlebot3 simulation using [CollaborativeRoboticsLab/turtlebot3-docker](https://github.com/CollaborativeRoboticsLab/turtlebot3-docker)
 
 
 | Example | Description |
@@ -22,7 +22,7 @@ Examples depend on [CollaborativeRoboticsLab/capabilities2](https://github.com/C
 | [Example 4](./docs/example4.md) | Implements moving the robot through a sequence of given coordinates, where two are unreachable with two recoveries |
 | [Example 5](./docs/example5.md) | Implements moving the robot through a sequence of given coordinates, where two are unreachable, but all contains recovery actions. |
 
-To run the examples
+To run the examples, first make sure that the simulation is running and then on different terminals run,
 
 ```bash
 source install/setup.bash

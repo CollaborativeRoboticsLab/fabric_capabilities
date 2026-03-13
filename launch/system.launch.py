@@ -16,7 +16,7 @@ def generate_launch_description():
     )
 
     # plan file folder
-    plan_file_folder = os.path.join(get_package_share_directory('fabric_capabilities'), 'plans')
+    plan_file_path = os.path.join(get_package_share_directory('fabric_capabilities'), 'plans', plan_file_name)
 
     # load config file
     fabric_config = os.path.join(get_package_share_directory('fabric'), 'config', 'fabric.yaml')
@@ -28,8 +28,7 @@ def generate_launch_description():
             name='fabric_server',
             output='screen',
             parameters=[fabric_config, 
-                        {"plan_file.folder": plan_file_folder}, 
-                        {"plan_file.file": plan_file_name}]
+                        {"plan_file_path": plan_file_path}]
         )
     
     return LaunchDescription([
