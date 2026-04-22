@@ -53,7 +53,7 @@ protected:
   generate_request(capabilities2_events::EventParameters& parameters) override
   {
     fabric_msgs::srv::SetFabricPlan::Request request;
-    request.plan = std::any_cast<std::string>(parameters.get_value("ReceivedPlan", std::string{}));
+    request.plan = std::any_cast<std::string>(parameters.get_value("plan", std::string{}));
 
     return request;
   }
