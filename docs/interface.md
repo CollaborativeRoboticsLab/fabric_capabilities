@@ -2,7 +2,7 @@
 
 Following are the details of the interfaces provided by the Fabric Capabilities package. A runner that intends to connect with one of these interfaces should support the input and ouput parameters described below.
 
-## CompletionRunner
+## FabricCompletionRunner
 
 Input Parameters:
 
@@ -14,7 +14,7 @@ Output Parameters:
 
 None
 
-## SetPlanRunner
+## FabricSetPlanRunner
 
 Input Parameters:
 
