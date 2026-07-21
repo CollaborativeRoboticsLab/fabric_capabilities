@@ -3,15 +3,15 @@
 <package format="3">
   <name>fabric_capabilities</name>
   <version>0.1.0</version>
-  <description>TODO: Package description</description>
-
+  <description>Provides capabilities2 runners for the Fabric stack.</description>
 
   <maintainer email="kalanaratnayake95@gmail.com">Kalana Ratnayake</maintainer>
   <maintainer email="kalana.ratnayakemudiyanselage@canberra.edu.au">Kalana Ratnayake</maintainer>
 
   <author email="kalana.ratnayakemudiyanselage@canberra.edu.au">Kalana Ratnayake</author>
+  <author email="kalanaratnayake95@gmail.com">Kalana Ratnayake</author>
   
-  <license>TODO: License declaration</license>
+  <license>MIT</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
