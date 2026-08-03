@@ -73,3 +73,19 @@ ros2 launch fabric_capabilities system.launch.py filename:=generative_1.xml
 ```
 
 Change `filename:=generative_1.xml` to match the other plans as shown in above table to run different examples.
+
+## Citation
+
+If you use this work in an academic context, please cite the following publication(s):
+
+```bibtex
+@misc{ratnayake2026gpsfsm,
+  title={A Generative Partially Specified Finite State Machine Approach to Complex Behaviour Planning}, 
+  author={Kalana Ratnayake and Michael Pritchard and David Hinwood and Maleen Jayasuriya and Damith Herath},
+  year={2026},
+  eprint={2607.15674},
+  archivePrefix={arXiv},
+  primaryClass={cs.RO},
+  url={https://arxiv.org/abs/2607.15674}, 
+}
+```
