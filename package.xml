@@ -30,13 +30,13 @@
   <export>
     <build_type>ament_cmake</build_type>
 
-    <!-- FabricSetPlanRunner -->
+    <!-- FabricGeneratePlanRunner -->
     <capability_interface>
-      interfaces/FabricSetPlanRunner.yaml
+      interfaces/FabricGeneratePlanRunner.yaml
     </capability_interface>
 
     <capability_provider>
-      providers/FabricSetPlanRunner.yaml
+      providers/FabricGeneratePlanRunner.yaml
     </capability_provider>
 
     <!-- FabricCompletionRunner -->

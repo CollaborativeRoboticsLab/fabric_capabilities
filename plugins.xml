@@ -1,7 +1,7 @@
 <library path="fabric_capabilities">
-    <class type="capabilities2_runner::FabricSetPlanRunner" base_class_type="capabilities2_runner::RunnerBase">
+    <class type="capabilities2_runner::FabricGeneratePlanRunner" base_class_type="capabilities2_runner::RunnerBase">
         <description>
-            A plugin that sets a new Fabric plan to the Fabric
+            A plugin that generates a new Fabric plan
         </description>
     </class>
     <class type="capabilities2_runner::FabricCompletionRunner" base_class_type="capabilities2_runner::RunnerBase">

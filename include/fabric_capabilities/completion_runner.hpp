@@ -28,7 +28,7 @@ public:
    */
   virtual void start(rclcpp::Node::SharedPtr node, const runner_opts& run_config, const std::string& bond_id) override
   {
-    init_service(node, run_config, "/fabric/set_completion");
+    init_service(node, run_config, "/fabric/plan/set_completion");
 
     // emit start event
     emit_started(bond_id, "", param_on_started());
