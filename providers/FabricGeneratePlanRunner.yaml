@@ -3,7 +3,25 @@
 ---
 name: FabricGeneratePlanRunner
 spec_type: provider
-spec_version: 1.1
-description: "The capability provider for generating a new plan. This can be used to trigger the planning process for a new task"
+spec_version: 1.2
+description: "The provider for generating a new plan. This can be used to trigger the planning 
+              process for a new task"
 implements: fabric_capabilities/FabricGeneratePlanRunner
 runner: capabilities2_runner::FabricGeneratePlanRunner
+definition: 
+  command: "'<Runner interface=fabric_capabilities/FabricGeneratePlanRunner provider=fabric_capabilities/FabricGeneratePlanRunner task='$task', uuid='$uuid' flush='$flush' />'"
+  configuration_parameters:
+    - name: task
+      type: string
+      description: "The task to be planned"
+    - name: uuid
+      type: string
+      description: "The unique identifier to match the correct prompt tools cache that contains
+                    the information needed for planning which are cached before and after this 
+                    capability by other capabilities."
+    - name: flush
+      type: boolean
+      description: "A boolean to indicate whether to flush the current prompt tools cache or not. 
+                    This needs to be 'true' if this is the last capability in the plan with flush 
+                    parameter indicating all information has been cached. If not set, it should 
+                    be 'false'."

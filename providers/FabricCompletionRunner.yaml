@@ -2,7 +2,7 @@
 ---
 name: FabricCompletionRunner
 spec_type: provider
-spec_version: 1.1
-description: "The capability provider for the /fabric/set_completion interface"
+spec_version: 1.2
+description: "The provider for the fabric_capabilities/FabricCompletionRunner interface"
 implements: fabric_capabilities/FabricCompletionRunner
 runner: capabilities2_runner::FabricCompletionRunner
