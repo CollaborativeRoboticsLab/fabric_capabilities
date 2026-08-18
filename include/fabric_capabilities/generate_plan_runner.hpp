@@ -106,8 +106,14 @@ protected:
     }
   }
 
-  static std::string status_code_to_string(const uint8_t code)
+  virtual void process_result(typename fabric_msgs::action::GeneratePlan::Result::SharedPtr result) override
   {
+    if (!result)
+      return;
+
+    RCLCPP_INFO(node_->get_logger(), "generated plan result received with plan_id: %s", result->plan_id.c_str());
+    RCLCPP_INFO(node_->get_logger(), "generated plan:\n%s", result->plan.c_str());
+    RCLCPP_INFO(node_->get_logger(), "generation reasoning:\n%s", result->reasoning.c_str());
   }
 };
 
