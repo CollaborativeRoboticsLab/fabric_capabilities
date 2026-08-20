@@ -13,14 +13,19 @@ definition:
   configuration_parameters:
     - name: task
       type: string
-      description: "The task to be planned"
+      semantic_key: fabric.task
+      description: "The task for which the plan is to be generated. This is a string that describes the 
+                    task in natural language."
     - name: uuid
       type: string
+      semantic_key: prompt.cache.uuid
       description: "The unique identifier to match the correct prompt tools cache that contains
                     the information needed for planning which are cached before and after this 
                     capability by other capabilities."
     - name: flush
       type: boolean
+      semantic_key: prompt.cache.flush
+      default: false
       description: "A boolean to indicate whether to flush the current prompt tools cache or not. 
                     This needs to be 'true' if this is the last capability in the plan with flush 
                     parameter indicating all information has been cached. If not set, it should 
