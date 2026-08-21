@@ -7,9 +7,9 @@ description: "This capability generates a new plan using fabric generation actio
               on the fabric package. This needs to be included in every fabric where a subsequent
               plan for execution is expected. This needs to be triggered at the very end of 
               each plan to begin the new planning process for the next task. The plan generated 
-              by this capability will be automatically queued in the fabric. 
+              by this capability will be automatically queued in the fabric."
 interface:
   actions:
     "/fabric/plan/generate":
-      type: "fabric_msgs::action::GenerateFabricPlan"
+      type: "fabric_msgs::action::GeneratePlan"
       description: "Action interface for generating a new execution plan for the fabric."

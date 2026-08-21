@@ -9,7 +9,7 @@ description: "The provider for generating a new plan. This can be used to trigge
 implements: fabric_capabilities/FabricGeneratePlanRunner
 runner: capabilities2_runner::FabricGeneratePlanRunner
 definition: 
-  command: "'<Runner interface=fabric_capabilities/FabricGeneratePlanRunner provider=fabric_capabilities/FabricGeneratePlanRunner task='$task', uuid='$uuid' flush='$flush' />'"
+  command: "<Runner interface=fabric_capabilities/FabricGeneratePlanRunner provider=fabric_capabilities/FabricGeneratePlanRunner task='$task' uuid='$uuid' flush='$flush' />"
   configuration_parameters:
     - name: task
       type: string
@@ -19,12 +19,15 @@ definition:
     - name: uuid
       type: string
       semantic_key: prompt.cache.uuid
+      optional: true
+      default: ""
       description: "The unique identifier to match the correct prompt tools cache that contains
                     the information needed for planning which are cached before and after this 
                     capability by other capabilities."
     - name: flush
       type: boolean
       semantic_key: prompt.cache.flush
+      optional: true
       default: false
       description: "A boolean to indicate whether to flush the current prompt tools cache or not. 
                     This needs to be 'true' if this is the last capability in the plan with flush 

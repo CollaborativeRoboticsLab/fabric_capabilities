@@ -33,7 +33,7 @@ public:
    */
   virtual void start(rclcpp::Node::SharedPtr node, const runner_opts& run_config, const std::string& bond_id) override
   {
-    init_action(node, run_config, "/fabric/plan/generate");
+    init_action(node, run_config, "/fabric/plan/generate", "fabric_msgs::action::GeneratePlan");
 
     // emit start event
     emit_started(bond_id, "", param_on_started());

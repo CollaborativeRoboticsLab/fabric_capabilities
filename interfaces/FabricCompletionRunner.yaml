@@ -4,9 +4,9 @@ name: FabricCompletionRunner
 spec_version: 1.2
 spec_type: interface
 description: "This capability notifies the completion of the fabric to the fabric server. This 
-              is included on every fabric as the last capability to be triggered during connection 
-              identification phase. A planning entity does not need to include this generated plans
-              as it is included by the fabric server itself."
+              is included on every fabric during connection identification phase as the last 
+              capability to be triggered. A planning entity does not need to include this in 
+              generated plans as it is included by the fabric server itself."
 interface:
   services:
     "/fabric/plan/set_completion":
