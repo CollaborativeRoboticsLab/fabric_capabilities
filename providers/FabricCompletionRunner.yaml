@@ -7,12 +7,3 @@ description: "The provider for notifying the fabric server that a queued or exec
               has completed."
 implements: fabric_capabilities/FabricCompletionRunner
 runner: capabilities2_runner::FabricCompletionRunner
-definition:
-  command: "<Runner interface=fabric_capabilities/FabricCompletionRunner provider=fabric_capabilities/FabricCompletionRunner plan_id='$plan_id' />"
-  configuration_parameters:
-    - name: plan_id
-      type: string
-      semantic_key: fabric.plan_id
-      description: "The identifier of the fabric plan whose completion should be reported
-                    to the fabric server. This is typically set by the fabric server itself
-                    when this runner is added to the plan during parsing stage."
