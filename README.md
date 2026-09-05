@@ -55,25 +55,27 @@ docker compose up
 
 ## Running the examples
 
-To run the examples, first make sure that the simulation is running and then on different terminals run,
+To run the examples, first make sure that the simulation is running.
 
-```bash
-source install/setup.bash
-ros2 launch capabilities2_server capabilities2_server.launch.py
-```
-
-Replace <your_openai_api_key> with your actual OpenAI API key in the command below.
-
-```bash
-export OPENAI_API_KEY=<your_openai_api_key>
-source install/setup.bash
-ros2 launch prompt_bridge prompt_bridge.launch.py
-```
+For non-generative execution plans, a single launch is enough because the wrapper now includes Fabric, Capabilities2, and prompt tools by default:
 
 ```bash
 source install/setup.bash
 ros2 launch fabric_capabilities system.launch.py filename:=nav2_generative_1.xml
 ```
+
+For prompt-based generation, the same launch already starts prompt tools by default.
+Replace <your_openai_api_key> with your actual OpenAI API key before launching.
+
+```bash
+export OPENAI_API_KEY=<your_openai_api_key>
+source install/setup.bash
+ros2 launch fabric_capabilities system.launch.py filename:=nav2_generative_1.xml
+```
+
+If you do not want `prompt_bridge` in this launch graph, add `start_prompt_tools:=false`.
+
+If you also want Experience and Supervisor in the same launch graph, add `start_experience_stack:=true`.
 
 Change `filename:=nav2_generative_1.xml` to any other file from the table above.
 
