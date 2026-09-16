@@ -59,6 +59,11 @@ protected:
     goal.uuid = std::any_cast<std::string>(parameters.get_value("uuid", std::string{}));
     goal.flush = std::any_cast<bool>(parameters.get_value("flush", false));
 
+    RCLCPP_INFO(node_->get_logger(),
+                "generate plan goal created: task='%s' uuid='%s' flush=%s auto_queue=%s",
+                goal.task.c_str(), goal.uuid.c_str(), goal.flush ? "true" : "false",
+                goal.auto_queue ? "true" : "false");
+
     return goal;
   }
 
@@ -109,7 +114,10 @@ protected:
   virtual void process_result(typename fabric_msgs::action::GeneratePlan::Result::SharedPtr result) override
   {
     if (!result)
+    {
+      RCLCPP_WARN(node_->get_logger(), "generate plan result was null");
       return;
+    }
 
     RCLCPP_INFO(node_->get_logger(), "generated plan result received with plan_id: %s", result->plan_id.c_str());
     RCLCPP_INFO(node_->get_logger(), "generated plan:\n%s", result->plan.c_str());

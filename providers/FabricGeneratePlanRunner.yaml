@@ -5,7 +5,7 @@ name: FabricGeneratePlanRunner
 spec_type: provider
 spec_version: 1.2
 description: "The provider for generating a new plan. This can be used to trigger the planning 
-              process for a new task"
+              process for a new task.  But if fabric.task is empty, do not add this capability at the end"
 implements: fabric_capabilities/FabricGeneratePlanRunner
 runner: capabilities2_runner::FabricGeneratePlanRunner
 definition: 
@@ -15,7 +15,7 @@ definition:
       type: string
       semantic_key: fabric.task
       description: "The task for which the plan is to be generated. This is a string that describes the 
-                    task in natural language."
+                    task in natural language. But if this is empty, do not add this capability at the end"
     - name: uuid
       type: string
       semantic_key: prompt.cache.uuid
